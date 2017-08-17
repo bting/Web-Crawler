@@ -36,7 +36,7 @@ def file_to_set(file_name):
     results = set()
     with open(file_name, 'rt') as f:
         for line in f:
-            set.add(line.replace('\n', ''))
+            results.add(line.replace('\n', ''))
     return results
 
 # Iterate through a set, each item will be a new line in the file
@@ -44,6 +44,4 @@ def set_to_file(links, path):
     delete_file_contents(path)
     for link in links:
         append_to_file(path, link)
-
-create_project_dir('test')
-create_data_files('test', 'google.com')
+        
